@@ -1,0 +1,5 @@
+name=RugsExtended
+id=RugsExt
+poster=poster
+description=makes all rug pieces craftable
+tiledef=rugs_tiledefinitions 999

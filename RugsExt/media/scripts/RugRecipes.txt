@@ -1,0 +1,123 @@
+module rugCrafting
+{
+	recipe Make Dark Green Rug Piece
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_60,
+
+	}
+	recipe Make Dark Green Rug Piece
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_61,
+
+	}
+	recipe Make Bordeaux Rug  Piece
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_62,
+
+	}
+	recipe Make Fancy Orange Rug  Piece
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_24,
+
+	}
+	recipe Make Blue Checkered Rug  Piece
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_26,
+
+	}
+	recipe Make Fancy Brown Rug  Piece
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_28,
+
+	}
+	recipe Make Fancy Green Rug  Piece
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_30,
+
+	}
+	recipe Make Bathroom Rug  Piece
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_48,
+
+	}
+	recipe Make Bathroom Rug  Piece 2
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_52,
+
+	}
+	recipe Make Door Mat Rug  Piece
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_56,
+
+	}
+	recipe Make Toddler Rug Piece
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_63,
+
+	}
+	recipe Make Dark Grey Rug Piece
+	{
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+		Sheet,
+		Thread = 5,
+		CanBeDoneFromFloor:true,
+		Time:30,
+		Result:Moveables.floors_rugs_01_87,
+
+	}	
+}	
