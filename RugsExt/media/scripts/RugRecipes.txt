@@ -10,16 +10,6 @@ module rugCrafting
 		Result:Moveables.floors_rugs_01_60,
 
 	}
-	recipe Make Dark Green Rug Piece
-	{
-		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
-		Sheet,
-		Thread = 5,
-		CanBeDoneFromFloor:true,
-		Time:30,
-		Result:Moveables.floors_rugs_01_61,
-
-	}
 	recipe Make Bordeaux Rug  Piece
 	{
 		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
