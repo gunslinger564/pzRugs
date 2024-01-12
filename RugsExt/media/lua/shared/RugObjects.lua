@@ -1,27 +1,32 @@
 RugObjects = {}
 RugTypes = {}
-for i = 0,112 do
-	RugObjects[i] = "Moveables.floors_rugs_01_" .. i
-end
-local removeSprites = {}
-removeSprites = {"Moveables.floors_rugs_01_86","Moveables.floors_rugs_01_94","Moveables.floors_rugs_01_95","Moveables.floors_rugs_01_102","Moveables.floors_rugs_01_103","Moveables.floors_rugs_01_110","Moveables.floors_rugs_01_111","Moveables.floors_rugs_01_48","Moveables.floors_rugs_01_49","Moveables.floors_rugs_01_50","Moveables.floors_rugs_01_51","Moveables.floors_rugs_01_52","Moveables.floors_rugs_01_53","Moveables.floors_rugs_01_54","Moveables.floors_rugs_01_55","Moveables.floors_rugs_01_56","Moveables.floors_rugs_01_57","Moveables.floors_rugs_01_58","Moveables.floors_rugs_01_59"}
-	
-for i, names in pairs(RugObjects) do
-	for y, x in pairs(removeSprites) do
-		if string.find(names,x) then
-			RugObjects[i] = nil
-		end
+MainRugSprites = {}
+for i = 0,110 do
+	if i ~= 86 and i ~= 94 and i ~= 95 and i ~= 102 and i ~= 103 then
+
+		RugObjects[i] = "Moveables.floors_rugs_01_" .. i 
 	end
 end
+	
+
+
+
+
+
 MainRugSprites = {
-	darkGreenRug = {"Moveables.floors_rugs_01_0","Moveables.floors_rugs_01_2","Moveables.floors_rugs_01_88","Moveables.floors_rugs_01_60",},
+	darkGreenRug = {"Moveables.floors_rugs_01_60","Moveables.floors_rugs_01_0","Moveables.floors_rugs_01_2","Moveables.floors_rugs_01_88",},
 	darkPurpleRug = {"Moveables.floors_rugs_01_8","Moveables.floors_rugs_01_10","Moveables.floors_rugs_01_80","Moveables.floors_rugs_01_61",},
-	bordeauxRug = {"Moveables.floors_rugs_01_16","Moveables.floors_rugs_01_18","Moveables.floors_rugs_01_96","Moveables.floors_rugs_01_62",},
+	bordeauxRug = {"Moveables.floors_rugs_01_62","Moveables.floors_rugs_01_16","Moveables.floors_rugs_01_18","Moveables.floors_rugs_01_96",},
 	fancyOrangeRug = {"Moveables.floors_rugs_01_24","Moveables.floors_rugs_01_32",},
-	darkGreyRug = 	{"Moveables.floors_rugs_01_72","Moveables.floors_rugs_01_74","Moveables.floors_rugs_01_104","Moveables.floors_rugs_01_87",},
+	darkGreyRug = 	{"Moveables.floors_rugs_01_87","Moveables.floors_rugs_01_72","Moveables.floors_rugs_01_74","Moveables.floors_rugs_01_104",},
 	blueCheckeredRug = {"Moveables.floors_rugs_01_26","Moveables.floors_rugs_01_34",},
 	fancyBrownRug = {"Moveables.floors_rugs_01_28","Moveables.floors_rugs_01_36",},
 	fancyGreenRug =  {"Moveables.floors_rugs_01_30","Moveables.floors_rugs_01_38",},
+	toddlerRug =		{"Moveables.floors_rugs_01_63","Moveables.floors_rugs_01_65","Moveables.floors_rugs_01_68",},
+	redBathroomRug = {"Moveables.floors_rugs_01_48",},
+	purpleBathroomRug = {"Moveables.floors_rugs_01_52",},
+	doorMatRug = {"Moveables.floors_rugs_01_56",}
+
 }
 RugTypes =
 {
@@ -84,24 +89,6 @@ RugTypes =
 										"Moveables.floors_rugs_01_40",
 										"Moveables.floors_rugs_01_41",
 									},
-										--rugTypes.bathroomRug = {
-										--	"Moveables.floors_rugs_01_48",
-										--	"Moveables.floors_rugs_01_49",
-										--	"Moveables.floors_rugs_01_50",
-										--	"Moveables.floors_rugs_01_51",
-										--}
-										--rugTypes.bathroomRug2 = {
-										--	"Moveables.floors_rugs_01_52",
-										--	"Moveables.floors_rugs_01_53",
-										--	"Moveables.floors_rugs_01_54",
-										--	"Moveables.floors_rugs_01_55",
-										--}
-										--rugTypes.doorMatRug = {
-										--	"Moveables.floors_rugs_01_56",
-										--	"Moveables.floors_rugs_01_57",
-										--	"Moveables.floors_rugs_01_58",
-										--	"Moveables.floors_rugs_01_59",
-										--}
 				toddlerRug =		{
 										"Moveables.floors_rugs_01_63",
 										"Moveables.floors_rugs_01_64",
