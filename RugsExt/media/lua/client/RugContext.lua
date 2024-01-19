@@ -74,25 +74,28 @@ function RugObjects.rugItemsContextMenuEntry(player, context, items)
 
 		--Crafting rugs
 
-		local isContext	= RugObjects.CraftContextItemsCheck(item)
-		local count = RugObjects.CraftItemsCount(player)
+		local isContext	= RugObjects.CraftContextItemsCheck(item,player)
+		local count = nil
 		local choices = RugObjects.sortChoicesByDye(player)
 		
 		
-		if count and isContext and not CraftRugSubmenu  then
+		if isContext and not CraftRugSubmenu  then
 			--creating submenu for craft options
 			CraftRugSubmenu = context:getNew(context)
-			context:addSubMenu(context:addOption(getText("Craft Rug")),CraftRugSubmenu)
+			local  submenuContext = context:addSubMenu(context:addOption(getText("Craft Rug")),CraftRugSubmenu)
 			--listing craft options in context menu
 			for i,t in pairs(choices) do
-					CraftRugSubmenu:addOption(getText(i),getSpecificPlayer(player),RugObjects.UsedRecipe,t[1],1,i)		
+				count = RugObjects.CraftItemsCount(player,i)
+				if count then CraftRugSubmenu:addOption(getText(i),getSpecificPlayer(player),RugObjects.UsedRecipe,t[1],1,i)else submenuContext = nil end	
 			end
-			if count > 1 then
+			--if count > 1 then
 				for i,t in pairs(choices) do
+					
+					count = RugObjects.CraftItemsCount(player,i)
 					--extra crafting option for using all sheets in inventory
-						CraftRugSubmenu:addOption(getText(i) .. " X " .. count,getSpecificPlayer(player),RugObjects.UsedRecipe,t[1],count,i)
+						if count and count > 1 then CraftRugSubmenu:addOption(getText(i) .. " X " .. count,getSpecificPlayer(player),RugObjects.UsedRecipe,t[1],count,i) else CraftRugSubmenu:removeLastOption()end
 				end
-			end
+			--end
 		end
 	end
 end

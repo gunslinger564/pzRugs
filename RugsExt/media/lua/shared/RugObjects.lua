@@ -1,14 +1,12 @@
 RugObjects = {}
-RugTypes = {}
-MainRugSprites = {}
 
---reverse searchable table 
-RugObjects.AllRugs = {}
-for i = 0,110 do
+
+RugObjects.AllRugs = {}--reverse searchable table ,completed at bottom
+--[[for i = 0,110 do
 	if i ~= 86 and i ~= 94 and i ~= 95 and i ~= 102 and i ~= 103 then
 		RugObjects.AllRugs["Moveables.floors_rugs_01_" .. i] = 0
 	end
-end
+end--]]
 -- List of what dyes are used to make each rugtype
 RugObjects.RugDyeCombo = {
 	darkGreenRug ={"Base.HairDyeGreen"},
@@ -44,6 +42,8 @@ RugObjects.MainRugSprites = {
 	doorMatRug = {"Moveables.floors_rugs_01_56",}
 
 }
+
+--Every RugObject Sorted by name
 RugObjects.RugTypes =
 {
 					darkGreenRug = {
@@ -177,11 +177,8 @@ RugObjects.blackListConversion = {doorMatRug = true ,purpleBathroomRug = true,re
 
 for rugType, rugNames in pairs(RugObjects.RugTypes)do
 	for _, rugName in pairs(rugNames)do
-		for i,SRugName in pairs(RugObjects.AllRugs)do
-			if i == rugName then
-				RugObjects.AllRugs[i] = rugType
+			RugObjects.AllRugs[rugName] = rugType
 				
-			end
-		end
+			
 	end
 end
