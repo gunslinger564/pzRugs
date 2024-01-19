@@ -1,0 +1,21 @@
+Sandbox_EN = {
+Sandbox_RugCraft = "RugCraft"  
+Sandbox_RugObjects_EasyRecipe = "Easy Recipe"
+Sandbox_RugObjects_EasyRecipe_tooltip = "2 sheets"
+
+Sandbox_RugObjects_MedRecipe = "Medium Recipe"
+Sandbox_RugObjects_MedRecipe_tooltip = "2 sheets 1 yarn 1 thread"
+
+Sandbox_RugObjects_HardRecipe = "Hard Recipe"
+Sandbox_RugObjects_HardRecipe_tooltip = "The same as medium but with dye requirements"
+
+Sandbox_RugObjects_setCustomRecipe = "Enable Custom Craft Recipe"
+Sandbox_RugObjects_setCustomRecipe_tooltip = "Enable to set the items below as the recipe"
+
+Sandbox_RugObjects_setCustomCraftRecipe = "Custom Craft Recipe"
+Sandbox_RugObjects_setCustomCraftRecipe_tooltip = "format: module.itemName for every item it costs separated by a comma "
+
+Sandbox_RugObjects_setCustomRipRecipe = "Custom Rip Recipe"
+Sandbox_RugObjects_setCustomRipRecipe_tooltip = "Add what you want to be given back when you rip a rug"
+
+}

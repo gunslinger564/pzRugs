@@ -1,0 +1,21 @@
+VERSION = 1,
+option RugObjects.setMediumRecipe {
+	page = RugCraft, translation = RugObjects_MedRecipe,
+	type = boolean,default = false,
+}
+option RugObjects.setHardRecipe {
+	page = RugCraft, translation = RugObjects_HardRecipe,
+	type = boolean,default = false,
+}
+option RugObjects.setCustomRecipe {
+	page = RugCraft, translation = RugObjects_setCustomRecipe,
+	type = boolean,default = false,
+}
+option RugObjects.setCustomCraftRecipe {
+	page = RugCraft, translation = RugObjects_setCustomCraftRecipe,
+	type = string,default = Base.Sheet,Base.Sheet
+}
+option RugObjects.setCustomRipRecipe {
+	page = RugCraft, translation = RugObjects_setCustomRipRecipe,
+	type = string,default = Base.Sheet,Base.Sheet
+}

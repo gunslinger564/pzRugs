@@ -1,19 +1,35 @@
 RugObjects = {}
 RugTypes = {}
 MainRugSprites = {}
+
+--reverse searchable table 
+RugObjects.AllRugs = {}
 for i = 0,110 do
 	if i ~= 86 and i ~= 94 and i ~= 95 and i ~= 102 and i ~= 103 then
-
-		RugObjects[i] = "Moveables.floors_rugs_01_" .. i 
+		RugObjects.AllRugs["Moveables.floors_rugs_01_" .. i] = 0
 	end
 end
-	
+-- List of what dyes are used to make each rugtype
+RugObjects.RugDyeCombo = {
+	darkGreenRug ={"Base.HairDyeGreen"},
+	darkPurpleRug ={"Base.HairDyeBlue","Base.HairDyeRed"},
+	bordeauxRug ={"Base.HairDyeRed"},
+	fancyOrangeRug ={"Base.HairDyeRed","Base.HairDyeGreen"},
+	darkGreyRug ={"Base.HairDyeWhite","Base.HairDyeBlack"},
+	blueCheckeredRug ={"Base.HairDyeBlue"},
+	fancyBrownRug ={"Base.HairDyeLightBrown"},
+	fancyGreenRug ={"Base.HairDyeGreen"},
+	toddlerRug ={"Base.HairDyeYellow","Base.HairDyeBlue","Base.HairDyeRed","Base.HairDyeGreen"},
+	redBathroomRug ={"Base.HairDyeRed"},
+	purpleBathroomRug ={"Base.HairDyeBlue","Base.HairDyeRed"},
+	doorMatRug ={"Base.HairDyeBlue","Base.HairDyeRed"},
+}
 
 
 
 
-
-MainRugSprites = {
+-- List Of Rugs that are crafted/converted to. The first option is what's crafted
+RugObjects.MainRugSprites = {
 	darkGreenRug = {"Moveables.floors_rugs_01_60","Moveables.floors_rugs_01_0","Moveables.floors_rugs_01_2","Moveables.floors_rugs_01_88",},
 	darkPurpleRug = {"Moveables.floors_rugs_01_8","Moveables.floors_rugs_01_10","Moveables.floors_rugs_01_80","Moveables.floors_rugs_01_61",},
 	bordeauxRug = {"Moveables.floors_rugs_01_62","Moveables.floors_rugs_01_16","Moveables.floors_rugs_01_18","Moveables.floors_rugs_01_96",},
@@ -28,7 +44,7 @@ MainRugSprites = {
 	doorMatRug = {"Moveables.floors_rugs_01_56",}
 
 }
-RugTypes =
+RugObjects.RugTypes =
 {
 					darkGreenRug = {
 										"Moveables.floors_rugs_01_0",
@@ -141,4 +157,31 @@ RugTypes =
 										"Moveables.floors_rugs_01_46",
 										"Moveables.floors_rugs_01_47",
 									},
+				redBathroomRug =	{	"Moveables.floors_rugs_01_48",
+										"Moveables.floors_rugs_01_49",
+										"Moveables.floors_rugs_01_50",
+										"Moveables.floors_rugs_01_51",
+									},
+				purpleBathroomRug = {	"Moveables.floors_rugs_01_52",
+									 	"Moveables.floors_rugs_01_53",
+									 	"Moveables.floors_rugs_01_54",
+										"Moveables.floors_rugs_01_55",
+									},
+				doorMatRug 	= 		{	"Moveables.floors_rugs_01_56",
+										"Moveables.floors_rugs_01_57",
+										"Moveables.floors_rugs_01_58",
+										"Moveables.floors_rugs_01_59",
+									},
 }
+RugObjects.blackListConversion = {doorMatRug = true ,purpleBathroomRug = true,redBathroomRug = true}
+
+for rugType, rugNames in pairs(RugObjects.RugTypes)do
+	for _, rugName in pairs(rugNames)do
+		for i,SRugName in pairs(RugObjects.AllRugs)do
+			if i == rugName then
+				RugObjects.AllRugs[i] = rugType
+				
+			end
+		end
+	end
+end
